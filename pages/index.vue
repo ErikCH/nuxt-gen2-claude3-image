@@ -52,19 +52,40 @@ async function onSubmit() {
         @submit.prevent="onSubmit"
       >
         <div class="flex flex-col items-center gap-2">
-          <span>1. Enter Prompt</span>
+          <span class="font-extrabold">Enter Prompt</span>
           <label for="prompt" class="hidden">Prompt:</label>
 
-          <input
-            v-model="prompt"
-            type="text"
-            id="prompt"
-            placeholder="Enter Prompt Here"
-            class="w-96 rounded bg-gray-200 p-2"
-          />
+          <div class="relative">
+            <div
+              class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-3"
+            >
+              <svg
+                class="h-4 w-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+            </div>
+            <input
+              v-model="prompt"
+              type="text"
+              id="prompt"
+              placeholder="Enter Prompt Here"
+              class="w-96 rounded bg-gray-50 p-2 ps-10"
+            />
+          </div>
         </div>
         <div class="flex flex-col items-center gap-2">
-          <span>2. Upload File</span>
+          <span class="font-extrabold">Upload File</span>
           <label
             class="mb-2 hidden text-sm font-medium text-gray-900"
             for="file_input"
