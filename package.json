@@ -1,0 +1,35 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.525.0",
+    "aws-amplify": "^6.0.19",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1571.0",
+    "nuxt": "^3.10.3",
+    "vue": "^3.4.19",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^0.13.0-beta.4",
+    "@aws-amplify/backend-cli": "^0.12.0-beta.4",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/aws-lambda": "^8.10.135",
+    "aws-cdk": "^2.131.0",
+    "aws-cdk-lib": "^2.131.0",
+    "constructs": "^10.3.0",
+    "esbuild": "^0.20.1",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}
