@@ -84,21 +84,28 @@ async function onSubmit() {
             />
           </div>
         </div>
-        <div class="flex flex-col items-center gap-2">
-          <span class="font-extrabold">Upload File</span>
+        <div class="flex flex-col gap-2">
+          <span class="m-auto font-extrabold">Upload File</span>
           <label
             class="mb-2 hidden text-sm font-medium text-gray-900"
             for="file_input"
             >Upload file</label
           >
-          <input
-            class="block w-full text-sm text-slate-500 file:mr-4 file:rounded-md file:border-0 file:bg-red-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-red-700 hover:file:bg-red-100"
-            id="file_input"
-            :disabled="loading"
-            type="file"
-            @change="onFileChange($event)"
-          />
-          <img v-if="image" :src="image" alt="" class="object-fit max-w-32" />
+          <div class="flex gap-4">
+            <input
+              class="block w-full text-sm text-slate-500 file:mr-4 file:rounded-md file:border-0 file:bg-red-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-red-700 hover:file:bg-red-100"
+              id="file_input"
+              :disabled="loading"
+              type="file"
+              @change="onFileChange($event)"
+            />
+            <img
+              v-if="image"
+              :src="image"
+              alt=""
+              class="object-fit max-h-16 max-w-16"
+            />
+          </div>
         </div>
         <button
           type="submit"
