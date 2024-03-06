@@ -8,6 +8,8 @@ const image = ref("");
 const prompt = ref("");
 
 const client = generateClient<Schema>();
+
+// Handle File Upload
 function onFileChange(e: Event) {
   let target = e.target as HTMLInputElement;
   let files = target.files || [];
@@ -22,6 +24,7 @@ function onFileChange(e: Event) {
   reader.readAsDataURL(files[0]);
 }
 
+// Handle Submit
 async function onSubmit() {
   if (!image.value || !prompt.value) return;
   loading.value = true;
