@@ -14,12 +14,5 @@ backend.claudeFunction.resources.lambda.grantPrincipal.addToPrincipalPolicy(
   new PolicyStatement({
     resources: ["*"],
     actions: ["bedrock:InvokeModel"],
-  })
-);
-
-backend.claudeFunction.resources.lambda.grantPrincipal.addToPrincipalPolicy(
-  new PolicyStatement({
-    resources: ["*"],
-    actions: ["dynamodb:*"],
-  })
+  }),
 );
