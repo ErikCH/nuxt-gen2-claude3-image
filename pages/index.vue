@@ -71,7 +71,7 @@ async function onSubmit() {
             >Upload file</label
           >
           <input
-            class="block w-full text-sm text-slate-500 file:mr-4 file:rounded-md file:border-0 file:bg-purple-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-purple-700 hover:file:bg-purple-100"
+            class="block w-full text-sm text-slate-500 file:mr-4 file:rounded-md file:border-0 file:bg-red-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-red-700 hover:file:bg-red-100"
             id="file_input"
             :disabled="loading"
             type="file"
